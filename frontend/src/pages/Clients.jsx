@@ -90,18 +90,16 @@ const Clients = () => {
               <div className="card-sub">{client.phone || 'No phone'}</div>
               <div className="card-footer">
                 <Link to={`/clients/${client.id}`} className="link">
-                  View details
+                  <button className="btn-ghost subtle">View details</button>
                 </Link>
                 <button
-                  className="btn-danger"
+                  className="btn-ghost danger"
                   onClick={(e) => {
                     e.stopPropagation()
                     if (confirm(`Delete ${client.firstName} ${client.lastName}?`)) {
                       deleteMutation.mutate(client.id)
                     }
                   }}
-                  style={{ backgroundColor: 'red', color: 'white' }}
-                  
                 >
                   Delete
                 </button>
