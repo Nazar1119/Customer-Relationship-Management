@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+scikit-learn
+joblib
+pydantic-settings
+pyodbc
+pymysql
